@@ -1,5 +1,5 @@
 export default class jwt {
-	static parse = (token: string): unknown => {
+	static parsePayload = (token: string): unknown => {
 		const base64Url = token.split('.')[1];
 		const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
 		const jsonPayload = decodeURIComponent(
